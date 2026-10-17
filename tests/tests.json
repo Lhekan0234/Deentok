@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Browse the Deentok Islamic feed",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "Islamic short-video feed",
+      "category filtering",
+      "content source labels"
+    ],
+    "description": "Verifies visitors can browse the curated Islamic feed and narrow it by category.",
+    "steps": [
+      "Open Deentok",
+      "Select the Quran category",
+      "Open a Quran post"
+    ],
+    "expected": "The feed shows Islamic posts, the Quran filter narrows the list, and the selected post shows its category and source note."
+  },
+  {
+    "name": "Create a video post",
+    "viewport": "desktop",
+    "covers": [
+      "create post form",
+      "video URL validation",
+      "backend post persistence"
+    ],
+    "description": "Verifies a valid Islamic post can be published and remains visible after refreshing.",
+    "steps": [
+      "Choose Create",
+      "Enter a title, select a category, and provide a valid video URL",
+      "Publish the post",
+      "Refresh the page"
+    ],
+    "expected": "The new post appears in the feed after publishing and remains visible after refresh."
+  },
+  {
+    "name": "Save and like a post",
+    "viewport": "mobile",
+    "covers": [
+      "like interaction",
+      "save interaction",
+      "mobile feed controls"
+    ],
+    "description": "Verifies the feed's engagement controls are usable on a mobile viewport.",
+    "steps": [
+      "Open a post on mobile",
+      "Tap Like",
+      "Tap Save",
+      "Open the Saved view"
+    ],
+    "expected": "The post's like state updates and the saved post appears in the Saved view."
+  },
+  {
+    "name": "Validate a post before publishing",
+    "viewport": "mobile",
+    "covers": [
+      "required field validation",
+      "invalid video URL guardrail",
+      "user-visible form errors"
+    ],
+    "description": "Verifies incomplete or invalid post details are rejected with a clear message.",
+    "steps": [
+      "Open Create",
+      "Leave the title empty or enter an invalid video URL",
+      "Try to publish"
+    ],
+    "expected": "A clear validation message appears and no new post is added."
+  }
+]
